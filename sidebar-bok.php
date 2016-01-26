@@ -26,9 +26,9 @@ $author_id=$post->post_author;
 </div>
 </section>
 <section id="" class="widget">
-<h2 class="widget-title">Citat:</h2>
+<h2 class="widget-title"></h2>
 <div class="textwidget">
-<blockquote><?php the_author_meta( 'citat' ); ?></blockquote>
+<div class="fb-page" data-href="https://www.facebook.com/ProjektMoberg" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/ProjektMoberg"><a href="https://www.facebook.com/ProjektMoberg">Projekt Moberg</a></blockquote></div></div>
 </div>
 </section>
 </aside>
