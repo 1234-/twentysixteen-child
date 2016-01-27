@@ -97,7 +97,7 @@ margin-bottom:2.0em;
 .bokmeta {display:block;margin-bottom: 0.5384615385em;}
 
 .sidebar-bok .widget-title, .sidebar-bok h5 {clear:none;}
-.laddaner {float:right;background-color:#f9f9f9;border:1px solid #e9e9e9;padding:15px;}
+.laddaner {float:right;background-color:#f9f9f9;border:1px solid #e9e9e9;padding:15px;margin-bottom:15px;}
 .page-header {
     border-top: 0;
     margin: 0 7.6923% 0 0;

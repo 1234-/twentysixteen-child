@@ -26,8 +26,17 @@ if(the_field('omslag'))
 }
 ?>
 	<div class="laddaner">
-	<h3>Ladda ner e-bok:</h3>
-<?php
+	<?php
+	if(get_field('pdf')) {
+	echo '<h3>Ladda ner e-bok:</h3>';
+	}
+	elseif(get_field('epub')) {
+	echo '<h3>Ladda ner e-bok:</h3>'; }
+	elseif(get_field('mobi')) {
+	echo '<h3>Ladda ner e-bok:</h3>'; }
+	else {
+	echo '<h3>Status: Digitalisering pågår</h3><p>Den här boken håller på att digitaliseras. När den är redo kommer du kunna ladda ner den här. Anmäl dig till vårt nyhetsbrev för att få veta när den släpps.</p>';
+	}
 
 if(get_field('pdf'))
 {
