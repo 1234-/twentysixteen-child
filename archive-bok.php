@@ -25,7 +25,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title">Digitaliserade böcker</h1>
-				<div class="taxonomy-description"><p class="lead">Här hittar du de böcker som helt eller delvis har digitaliserats av Projekt Moberg; böcker om livet i Norden och om folken som levt här genom årtusendena.</p><p>På dom enskilda boksidorna kan du ladda ner e-böckerna. Vissa böcker, t.ex. de som digitaliserats av <a href="https://books.google.se/">Google Books</a>, finns bara i PDF-version än så länge, men där tar vi arbetet vidare och kommer att omvandla dom till e-böcker i .epub och .mobi format. I takt med att fler böcker läggs till kommer kategoriseringen förbättras så att du lättare kan bläddra bland böckerna.</p></div>
+				<div class="taxonomy-description"><p class="lead">Här hittar du de böcker som har eller håller på att digitaliseras av Projekt Moberg och andra digitaliseringsprojekt; böcker om livet i Norden och om folken som levt här genom årtusendena.</p><p>På dom enskilda boksidorna kan du ladda ner e-böckerna. Vissa böcker, t.ex. de som digitaliserats av <a href="https://books.google.se/">Google Books</a>, finns bara i PDF-version än så länge, men där tar vi arbetet vidare och kommer att omvandla dom till e-böcker i .epub och .mobi format. I takt med att fler böcker läggs till kommer kategoriseringen förbättras så att du lättare kan bläddra bland böckerna.</p></div>
 			</header><!-- .page-header -->
 
 			<?php
