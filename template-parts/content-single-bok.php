@@ -10,8 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title">Bok: <?php the_title();?><small><?php if(get_field('volym'))
-{echo ', volym ' . get_field('volym') . ' av ' . get_field('antal_volymer') . '';}  ?></small></h1>
+		<h1 class="entry-title">Bok: <?php the_title();?></h1>
 	</header><!-- .entry-header -->
 
 	<?php twentysixteen_excerpt(); ?>
