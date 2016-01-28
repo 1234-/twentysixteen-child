@@ -130,3 +130,6 @@ margin-bottom:2.0em;
     height: 150px;
     width: 150px;
 }
+.author .author-description .fb_iframe_widget, .single-bok .fb_iframe_widget {
+    margin-bottom: 0em;
+}
