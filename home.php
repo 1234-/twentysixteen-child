@@ -15,10 +15,31 @@
  */
 
 get_header(); ?>
-
+<div class="home-boxes">
+<div class="row">
+<div class="col-md-4">
+<div class="box-padding">
+<h3>Välkommen!</h3>
+<p>Nyfiken på vad vi gör? <b>Projekt Moberg</b> digitaliserar <a href="http://projektmoberg.se/vilka-bocker-kommer-att-digitaliseras/">gamla böcker</a> som skildrar det svenska och de nordiska folkens liv genom tiderna. Vi har just kommit igång med bevarandet av vårt kulturarv, så vi har en spännande tid framför oss!</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="box-padding">
+<h3>Biblioteket</h3>
+<p>I <a href="http://projektmoberg.se/bibliotek/">biblioteket</a> kommer du kunna hitta de böcker som har eller håller på att digitaliseras av Projekt Moberg och andra digitaliseringsprojekt; böcker om livet i Norden och om folken som levt här genom årtusendena.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="box-padding">
+<h3>Hjälp till</h3>
+<p>Att digitalisera vårt kulturarv är ett enormt arbete. Vi har inga statliga miljoner bakom oss utan allt sker med idéella krafter. Du kommer snart kunna stötta oss med både tid och pengar. Tills dess, följ oss <a href="https://www.facebook.com/ProjektMoberg/">på Facebook</a>!</p>
+</div>
+</div>
+</div>
+</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+<h2 style="margin-bottom:30px;">Från bloggen:</h2>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -26,7 +47,6 @@ get_header(); ?>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php endif; ?>
-
 			<?php
 			// Start the loop.
 			while ( have_posts() ) : the_post();

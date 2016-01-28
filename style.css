@@ -56,6 +56,9 @@ margin-bottom:2.0em;
     padding-bottom: 0;
 }
 
+.box-padding {padding:15px;background-color:#e9e9e9;}
+.home-boxes {padding-bottom:30px;margin-bottom:30px;border-bottom:1px solid #cccccc;}
+
 @media screen and (min-width: 44.375em){
 .site-title {
     font-size: 3rem;
