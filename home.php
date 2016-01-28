@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="col-md-4">
 <div class="box-padding">
 <h3>Välkommen!</h3>
-<p>Nyfiken på vad vi gör? <b>Projekt Moberg</b> digitaliserar <a href="http://projektmoberg.se/vilka-bocker-kommer-att-digitaliseras/">gamla böcker</a> som skildrar det svenska och de nordiska folkens liv genom tiderna. Vi har just kommit igång med bevarandet av vårt kulturarv, så vi har en spännande tid framför oss!</p>
+<p>Nyfiken på vad vi gör? <b>Projekt Moberg</b> digitaliserar <a href="http://projektmoberg.se/vilka-bocker-kommer-att-digitaliseras/">gamla böcker</a> som skildrar det svenska och de övriga nordiska folkens liv genom tiderna. Vi har just kommit igång med bevarandet av vårt kulturarv, så vi har en spännande tid framför oss!</p>
 </div>
 </div>
 <div class="col-md-4">
