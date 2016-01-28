@@ -18,6 +18,7 @@
 	<?php twentysixteen_post_thumbnail(); ?>
 
 	<div class="entry-content">
+	<div class="fb-like" data-href="<?php echo get_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		<?php
 			the_content();
 

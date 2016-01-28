@@ -10,6 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+	<div class="fb-like" data-href="<?php echo get_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		<h1 class="entry-title">Bok: <?php the_title();?></h1>
 	</header><!-- .entry-header -->
 
