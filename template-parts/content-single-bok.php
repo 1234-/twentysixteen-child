@@ -71,6 +71,10 @@ if(get_field('mobi'))
 		<?php twentysixteen_entry_meta(); ?>
 	<span class="byline">Författare: <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php echo get_the_author(); ?></a></span>
 		<?php
+if(get_field('oversattare_user'))
+{
+	echo '<span class="bokmeta">Översättare: <a class="author-link" href="http://projektmoberg.se/author/' . get_field('oversattare_user') . '/">'. get_field('oversattare_namn') .'</a></span>';
+}
 
 if(get_field('utgiven'))
 {
