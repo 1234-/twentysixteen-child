@@ -89,6 +89,14 @@ if(get_field('volym'))
 	echo '<span class="bokmeta">Volym: ' . get_field('volym') . ' av ' . get_field('antal_volymer') . '</span>';
 }
 ?>
+<p xmlns:dct="http://purl.org/dc/terms/">
+<a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
+<img src="http://i.creativecommons.org/p/mark/1.0/88x31.png"
+     style="border-style: none;" alt="Public Domain Mark" />
+</a>
+<br />
+<small>Detta verk (<span property="dct:title"><?php the_title( ); ?></span>, av <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="dct:creator"><span property="dct:title"><?php the_author( ); ?></span></a>), gjort tillgängligt av <a href="http://projektmoberg.se/" rel="dct:publisher"><span property="dct:title">Projekt Moberg</span></a>, är allmän egendom och får spridas och användas fritt.</small>
+</p>
 
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
