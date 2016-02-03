@@ -15,17 +15,8 @@
 	</header><!-- .entry-header -->
 
 	<?php twentysixteen_excerpt(); ?>
-
-	<?php twentysixteen_post_thumbnail(); ?>
 	
 	<div class="entry-content">
-			<?php
-
-if(the_field('omslag'))
-{
-	echo '<div class="omslagsbild"><img src="' . the_field('omslag') . '" alt="' . the_title('') . '" /></div>';
-}
-?>
 	<div class="laddaner">
 	<?php
 	if(get_field('pdf')) {

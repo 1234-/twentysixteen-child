@@ -8,7 +8,8 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
-
+global $post;
+$author_id=$post->post_author;
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -21,6 +22,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<?php wp_head(); ?>
+	<?php if (is_singular('bok')) {
+	echo '<meta property="og:type" content="book" />';
+	echo '<meta property="book:author" content="';
+	echo get_author_posts_url( $post->post_author );
+	echo '" /><meta property="book:release_date" content="' . get_field('utgiven') . '" />';
+	} elseif (is_author())  {
+	echo '<meta property="og:type" content="profile" />';
+	} elseif (is_single())  {
+	echo '<meta property="og:type" content="article" />';
+	} elseif (is_home())  {
+	echo '<meta property="og:type" content="website" />';
+	}?>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
