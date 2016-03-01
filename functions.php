@@ -18,7 +18,7 @@ add_filter('excerpt_length', 'new_excerpt_length');
 
 function add_pagination_to_author_page_query_string($query_string)
 {
-    if (isset($query_string['author_name'])) $query_string['post_type'] = array('post','bok');
+    if (isset($query_string['author_name'])) $query_string['post_type'] = array('post','bok','dikt');
     return $query_string;
 
 }

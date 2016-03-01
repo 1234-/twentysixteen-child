@@ -15,7 +15,7 @@
 		<?php endif; ?>
 		<div class="row">
 		<div class="col-md-12">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 		</div>
 		</div>
 	</header><!-- .entry-header -->
