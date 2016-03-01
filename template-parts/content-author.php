@@ -18,7 +18,7 @@
 		<?php twentysixteen_post_thumbnail(); ?>
 		</div>
 		<div class="col-md-8">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 		<?php the_excerpt(); ?>
 		</div>
 		</div>

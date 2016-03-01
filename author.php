@@ -36,18 +36,18 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     'showposts' => 10
 );
 $bok_posts = new WP_Query( $args );
-$args3 = array(
+$args2 = array(
     'post_type' => 'dikt' ,
     'author' => get_queried_object_id(), // this will be the author ID on the author page
     'showposts' => 10
 );
-$diktposts = new WP_Query( $args3 );
-$args2 = array(
+$diktposts = new WP_Query( $args2 );
+$args3 = array(
     'post_type' => 'post' ,
     'author' => get_queried_object_id(), // this will be the author ID on the author page
     'showposts' => 10
 );
-$posts = new WP_Query( $args2 );
+$posts = new WP_Query( $args3 );
 if ( $bok_posts->have_posts() ):
 echo '<h2 class="skrivetav">Böcker av ' . get_the_author() .':</h2>';
     while ( $bok_posts->have_posts() ) : $bok_posts->the_post();
