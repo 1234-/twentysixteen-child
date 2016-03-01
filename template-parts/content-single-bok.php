@@ -81,6 +81,9 @@ if(get_field('volym'))
 }
 ?>
 <hr/>
+<?php
+if(get_field('licens') == "publicdomain")
+{ ?>
 <p xmlns:dct="http://purl.org/dc/terms/">
 <a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
 <img src="http://i.creativecommons.org/p/mark/1.0/88x31.png"
@@ -89,6 +92,16 @@ if(get_field('volym'))
 <br />
 <small>Detta verk (<span property="dct:title"><?php the_title( ); ?></span>, av <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="dct:creator"><span property="dct:title"><?php the_author( ); ?></span></a>), gjort tillgängligt av <a href="http://projektmoberg.se/" rel="dct:publisher"><span property="dct:title">Projekt Moberg</span></a>, är allmän egendom och får spridas och användas fritt.</small>
 </p>
+<?php } elseif(get_field('licens') == "cc-by-nc-sa")
+{?>
+<p xmlns:dct="http://purl.org/dc/terms/">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/se/">
+                    <img src="http://litteraturbanken.se//red/bilder/gemensamt/cc-by-nc-sa-80x15.png" style="border-style: none;" alt="CC-BY-NC-SA">
+</a>
+<br />
+<small>Detta verk (<span property="dct:title"><?php the_title( ); ?></span>, av <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="dct:creator"><span property="dct:title"><?php the_author( ); ?></span></a>), gjort tillgängligt av <a href="<?php the_field('digitaliserad_av_url') ?>" rel="dct:publisher"><span property="dct:title"><?php the_field('digitaliserad_av') ?></span></a>, är licensierat med <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/se/">CC BY-NC-SA</a> licens och får delas fritt, med några villkor.</small>
+</p>
+<?php } ?>
 
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

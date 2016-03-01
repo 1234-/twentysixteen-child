@@ -20,4 +20,3 @@
 		</p><!-- .author-bio -->
 	</div><!-- .author-description -->
 </div><!-- .author-info -->
-<h2 class="skrivetav">Skrivet av <?php echo get_the_author(); ?>:</h2>

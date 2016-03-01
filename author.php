@@ -23,19 +23,69 @@ get_header(); ?>
 <?php 
 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 ?>
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
+<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
-			<?php
-			get_template_part( 'template-parts/authorpage' );
+			<?php get_template_part( 'template-parts/authorpage' );?>
+			<?php $args = array(
+    'post_type' => 'bok' ,
+    'author' => get_queried_object_id(), // this will be the author ID on the author page
+    'showposts' => 10
+);
+$custom_posts = new WP_Query( $args );
+if ( $custom_posts->have_posts() ):
+echo '<h2 class="skrivetav">Böcker av ' . get_the_author() .':</h2>';
+    while ( $custom_posts->have_posts() ) : $custom_posts->the_post();
+        get_template_part( 'template-parts/content-author' );
+    endwhile;
+else:
+    // nothing found
+endif;?>
+<?php
+		$args3 = array(
+    'post_type' => 'dikt' ,
+    'author' => get_queried_object_id(), // this will be the author ID on the author page
+    'showposts' => 10
+);
+$diktposts = new WP_Query( $args3 );
+if ( $diktposts->have_posts() ):
+echo '<h2 class="skrivetav">Dikter av ' . get_the_author() .':</h2>';
 			// Start the Loop.
-			while ( have_posts() ) : the_post();
+			while ( $diktposts->have_posts() ) : $diktposts->the_post();
+
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content-author-dikt' );
+
+			// End the loop.
+			endwhile;
+
+			// Previous/next page navigation.
+			the_posts_pagination( array(
+				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+				'next_text'          => __( 'Next page', 'twentysixteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
+			) );
+
+		endif;
+		?>
+		<?php
+		$args2 = array(
+    'post_type' => 'post' ,
+    'author' => get_queried_object_id(), // this will be the author ID on the author page
+    'showposts' => 10
+);
+$posts = new WP_Query( $args2 );
+if ( $posts->have_posts() ):
+echo '<h2 class="skrivetav">Texter av ' . get_the_author() .':</h2>';
+			// Start the Loop.
+			while ( $posts->have_posts() ) : $posts->the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -53,10 +103,6 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				'next_text'          => __( 'Next page', 'twentysixteen' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>

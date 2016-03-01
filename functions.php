@@ -24,14 +24,6 @@ function add_pagination_to_author_page_query_string($query_string)
 }
 add_filter('request', 'add_pagination_to_author_page_query_string');
 
-function custom_post_author_archive( &$query )
-{
-    if ( $query->is_author )
-        $query->set( 'post_type', array('post','bok') );
-    remove_action( 'pre_get_posts', 'custom_post_author_archive' ); // run once!
-}
-add_action( 'pre_get_posts', 'custom_post_author_archive' );
-
 	function author_excerpt (){                      
  $word_limit = 30; // Limit the number of words
  $more_txt = '[Läs mer]'; // The read more text
@@ -46,4 +38,17 @@ add_action( 'pre_get_posts', 'custom_post_author_archive' );
 remove_filter('pre_user_description', 'wp_filter_kses');
 //add sanitization for WordPress posts
 add_filter( 'pre_user_description', 'wp_filter_post_kses');
+
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+  if(is_category() || is_tag()) {
+    $post_type = get_query_var('post_type');
+	if($post_type)
+	    $post_type = $post_type;
+	else
+	    $post_type = array('post','dikt','bok'); // replace cpt to your custom post type
+    $query->set('post_type',$post_type);
+	return $query;
+    }
+}
 ?>
