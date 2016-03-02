@@ -79,6 +79,12 @@ if(get_field('volym'))
 {
 	echo '<span class="bokmeta">Volym: ' . get_field('volym') . ' av ' . get_field('antal_volymer') . '</span>';
 }
+if(get_field('digitaliserad_av'))
+{
+	echo '<span class="bokmeta">Digitaliserad av: <a href="';
+	echo the_field('digitaliserad_av_url');
+	echo '">' . get_field('digitaliserad_av') . '</a></span>';
+}
 ?>
 <hr/>
 <?php
