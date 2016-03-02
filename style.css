@@ -49,7 +49,7 @@ margin-bottom:2.0em;
     padding-bottom: 2.0em;
 }
 
-.archive .byline {display:block;}
+.archive .byline, .home .byline {display:block;}
 
 .home .site-main > article .entry-title, .author .site-main > article .entry-title, .archive .site-main > article .entry-title {
     margin-bottom: 0.5em;
@@ -133,3 +133,27 @@ margin-bottom:2.0em;
 .author .author-description .fb_iframe_widget, .single-bok .fb_iframe_widget {
     margin-bottom: 0em;
 }
+.archive article.dikt {
+    padding-bottom: 1.0em !important;
+border-bottom: 1px solid #e9e9e9 !important;
+    margin-bottom: 1.0em !important;
+}
+.archive article.dikt .entry-title {
+    margin-bottom: 0 !important;
+}
+@media screen and (min-width: 61.5625em){
+.author .dikt .entry-title {
+    font-size: 1.8rem !important;
+}}
+@media screen and (min-width: 44.375em){
+.author .dikt .entry-title {
+    font-size: 1.6rem !important;
+}}
+.home .nytt-i-biblioteket-wrapper h2 {margin-bottom:10px;}
+.home .nytt-i-biblioteket-titel {margin-bottom:30px !important;}
+@media screen and (min-width: 61.5625em){
+.home .nytt-i-biblioteket-wrapper .entry-footer {
+    	width: 30% !important;
+	margin-right:1% !important;
+}}
+.post-type-meta {font-family:Merriweather, Georgia, serif !important;font-size:20px !important;}
