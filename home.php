@@ -42,14 +42,14 @@ get_header(); ?>
     'author' => get_queried_object_id(), // this will be the author ID on the author page
     'showposts' => 3
 );
-$bok_posts = new WP_Query( $args );
-if ( $bok_posts->have_posts() ):
+$latest_posts = new WP_Query( $args );
+if ( $latest_posts->have_posts() ):
 echo '<div class="home-boxes">';
 echo '<div class="row">';
 echo '<h2 class="skrivetav">Nytt i biblioteket:</h2>';
 echo '</div>';
 echo '<div class="row">';
-    while ( $bok_posts->have_posts() ) : $bok_posts->the_post();
+    while ( $latest_posts->have_posts() ) : $latest_posts->the_post();
         get_template_part( 'template-parts/content-home-latest' );
     endwhile;
 echo '</div>';
