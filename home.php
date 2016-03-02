@@ -37,6 +37,27 @@ get_header(); ?>
 </div>
 </div>
 </div>
+			<?php $args = array(
+    'post_type' => array('bok','dikt') ,
+    'author' => get_queried_object_id(), // this will be the author ID on the author page
+    'showposts' => 3
+);
+$bok_posts = new WP_Query( $args );
+if ( $bok_posts->have_posts() ):
+echo '<div class="home-boxes">';
+echo '<div class="row">';
+echo '<h2 class="skrivetav">Nytt i biblioteket:</h2>';
+echo '</div>';
+echo '<div class="row">';
+    while ( $bok_posts->have_posts() ) : $bok_posts->the_post();
+        get_template_part( 'template-parts/content-home-latest' );
+    endwhile;
+echo '</div>';
+echo '</div>';
+else:
+    // nothing found
+endif; ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 <h2 style="margin-bottom:30px;">Från bloggen:</h2>
