@@ -46,7 +46,9 @@ $latest_posts = new WP_Query( $args );
 if ( $latest_posts->have_posts() ):
 echo '<div class="nytt-i-biblioteket-wrapper">';
 echo '<div class="row">';
+echo '<div class="col-md-12">';
 echo '<h2 class="nytt-i-biblioteket-titel">Nytt i biblioteket:</h2>';
+echo '</div>';
 echo '</div>';
 echo '<div class="row">';
     while ( $latest_posts->have_posts() ) : $latest_posts->the_post();
