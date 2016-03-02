@@ -58,7 +58,7 @@ else:
 endif;?>
 <?php
 if ( $diktposts->have_posts() ):
-echo '<h2 class="skrivetav">Dikter av ' . get_the_author() .':</h2>';
+echo '<h2 class="skrivetav">Utvalda dikter av ' . get_the_author() .':</h2>';
 			// Start the Loop.
 			while ( $diktposts->have_posts() ) : $diktposts->the_post();
 				/*
