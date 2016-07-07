@@ -34,6 +34,17 @@ $author_id=$post->post_author;
 	} elseif (is_home())  {
 	echo '<meta property="og:type" content="website" />';
 	}?>
+			<?php
+	$author_id = get_post_field('post_author', get_the_ID());
+	if (is_single() && ($author_id == 1) ) {
+	echo '<meta property="article:author"
+      content="https://www.facebook.com/danielsjbrg" />';
+      }
+      if (is_single() && ($author_id == 11) ) {
+	echo '<meta property="article:author"
+      content="https://www.facebook.com/johannorbergofficial/" />';
+      }
+	?>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
