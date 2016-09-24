@@ -39,7 +39,9 @@
 			<?php endif; ?>
 
 			<div class="site-info">
-				<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+				<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><!-- Begin MediaCreeper tracker code --><a href="http://mediacreeper.com/latest" title="MediaCreeper"><img src="http://mediacreeper.com/image" alt="MediaCreeper" style="width: 80px;height: 15px;border: 0px;"/></a><!-- End MediaCreeper tracker code --><!-- Begin Creeper tracker code -->
+<a href="http://gnuheter.com/creeper/senaste" title="Creeper"><img src="http://gnuheter.com/creeper/image" alt="Creeper" width="80" height="15" border="0"/></a>
+<!-- End Creeper tracker code -->
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->

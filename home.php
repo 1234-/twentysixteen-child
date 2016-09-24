@@ -38,7 +38,7 @@ get_header(); ?>
 </div>
 </div>
 			<?php $args = array(
-    'post_type' => array('bok','dikt') ,
+    'post_type' => array('bok','dikt','artikel','tal') ,
     'author' => get_queried_object_id(), // this will be the author ID on the author page
     'showposts' => 3
 );

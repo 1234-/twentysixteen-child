@@ -18,7 +18,7 @@ add_filter('excerpt_length', 'new_excerpt_length');
 
 function add_pagination_to_author_page_query_string($query_string)
 {
-    if (isset($query_string['author_name'])) $query_string['post_type'] = array('post','bok','dikt');
+    if (isset($query_string['author_name'])) $query_string['post_type'] = array('post','bok','dikt','artikel','tal');
     return $query_string;
 
 }
@@ -50,5 +50,13 @@ function query_post_type($query) {
     $query->set('post_type',$post_type);
 	return $query;
     }
+}
+		add_filter( 'instant_articles_post_types', 'add_post_types', 10,1 );
+function add_post_types($post_type_array){
+    array_push($post_type_array,'post');
+    array_push($post_type_array,'dikt');
+    array_push($post_type_array,'artikel');
+    array_push($post_type_array,'tal');
+   return $post_type_array;
 }
 ?>

@@ -48,6 +48,18 @@ $args3 = array(
     'showposts' => 10
 );
 $posts = new WP_Query( $args3 );
+$args4 = array(
+    'post_type' => 'artikel' ,
+    'author' => get_queried_object_id(), // this will be the author ID on the author page
+    'showposts' => 10
+);
+$artikelposts = new WP_Query( $args4 );
+$args5 = array(
+    'post_type' => 'tal' ,
+    'author' => get_queried_object_id(), // this will be the author ID on the author page
+    'showposts' => 10
+);
+$talposts = new WP_Query( $args5 );
 if ( $bok_posts->have_posts() ):
 echo '<h2 class="skrivetav">Böcker av ' . get_the_author() .':</h2>';
     while ( $bok_posts->have_posts() ) : $bok_posts->the_post();
@@ -57,6 +69,30 @@ else:
     // nothing found
 endif;?>
 <?php
+if ( $artikelposts->have_posts() ):
+echo '<h2 class="skrivetav">Artiklar av ' . get_the_author() .':</h2>';
+			// Start the Loop.
+			while ( $artikelposts->have_posts() ) : $artikelposts->the_post();
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content-author' );
+
+			// End the loop.
+			endwhile;
+
+			// Previous/next page navigation.
+			the_posts_pagination( array(
+				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+				'next_text'          => __( 'Next page', 'twentysixteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
+			) );
+
+		endif;
+		?>
+		<?php
 if ( $diktposts->have_posts() ):
 echo '<h2 class="skrivetav">Utvalda dikter av ' . get_the_author() .':</h2>';
 			// Start the Loop.
@@ -82,7 +118,7 @@ echo '<h2 class="skrivetav">Utvalda dikter av ' . get_the_author() .':</h2>';
 		?>
 		<?php
 if ( $posts->have_posts() ):
-echo '<h2 class="skrivetav">Texter av ' . get_the_author() .':</h2>';
+echo '<h2 class="skrivetav">Skrivet av ' . get_the_author() .':</h2>';
 			// Start the Loop.
 			while ( $posts->have_posts() ) : $posts->the_post();
 
@@ -105,7 +141,30 @@ echo '<h2 class="skrivetav">Texter av ' . get_the_author() .':</h2>';
 
 		endif;
 		?>
+		<?php
+if ( $talposts->have_posts() ):
+echo '<h2 class="skrivetav">Tal av ' . get_the_author() .':</h2>';
+			// Start the Loop.
+			while ( $talposts->have_posts() ) : $talposts->the_post();
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content-author' );
 
+			// End the loop.
+			endwhile;
+
+			// Previous/next page navigation.
+			the_posts_pagination( array(
+				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+				'next_text'          => __( 'Next page', 'twentysixteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
+			) );
+
+		endif;
+		?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 

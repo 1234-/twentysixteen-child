@@ -157,3 +157,13 @@ border-bottom: 1px solid #e9e9e9 !important;
 	margin-right:1% !important;
 }}
 .post-type-meta {font-family:Merriweather, Georgia, serif !important;font-size:20px !important;}
+.btn-black {background-color:#000;color:#fff!important;min-width:150px;padding: 5px 15px!important;}
+.btn-black a {color:#fff!important;font-size:1.1rem!important;font-family: Montserrat;padding-left:25px;padding-right: 5px;}
+.btn-black:hover {background-color:#fff;color:#000!important;border:1px solid #000 !important;}
+.btn-black a:hover {color:#000!important;text-decoration:none!important;}
+.main-navigation .fa::before {
+	float: left;
+margin-top: 1rem;
+	width: 20px;
+}
+.main-navigation .fa-heart {color:#c52e2e!important;}
