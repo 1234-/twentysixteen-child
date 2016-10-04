@@ -15,28 +15,9 @@
  */
 
 get_header(); ?>
-<div class="home-boxes">
-<div class="row">
-<div class="col-md-4">
-<div class="box-padding">
-<h3>Välkommen!</h3>
-<p>Nyfiken på vad vi gör? <b>Projekt Moberg</b> digitaliserar <a href="http://projektmoberg.se/vilka-bocker-kommer-att-digitaliseras/">gamla böcker</a> som skildrar det svenska och de övriga nordiska folkens liv, vårt kulturarv, genom tiderna. Vi har just kommit igång, så vi har en spännande tid framför oss!</p>
-</div>
-</div>
-<div class="col-md-4">
-<div class="box-padding">
-<h3>Biblioteket</h3>
-<p>I <a href="http://projektmoberg.se/bibliotek/">biblioteket</a> kommer du kunna hitta de böcker som har eller håller på att digitaliseras av Projekt Moberg och andra digitaliseringsprojekt; böcker om livet i Norden och om folken som levt här genom årtusendena.</p>
-</div>
-</div>
-<div class="col-md-4">
-<div class="box-padding">
-<h3>Hjälp till</h3>
-<p>Att digitalisera vårt kulturarv är ett enormt arbete. Vi har inga statliga miljoner bakom oss utan allt sker med idéella krafter. Du kommer snart kunna stötta oss med både tid och pengar. Tills dess, följ oss <a href="https://www.facebook.com/ProjektMoberg/">på Facebook</a>!</p>
-</div>
-</div>
-</div>
-</div>
+		<?php
+			get_template_part( 'template-parts/homecta' );
+		?>
 			<?php $args = array(
     'post_type' => array('bok','dikt','artikel','tal') ,
     'author' => get_queried_object_id(), // this will be the author ID on the author page
@@ -47,7 +28,7 @@ if ( $latest_posts->have_posts() ):
 echo '<div class="nytt-i-biblioteket-wrapper">';
 echo '<div class="row">';
 echo '<div class="col-md-12">';
-echo '<h2 class="nytt-i-biblioteket-titel">Nytt i biblioteket:</h2>';
+echo '<h2 class="nytt-i-biblioteket-titel text-center">Nytt i biblioteket:</h2>';
 echo '</div>';
 echo '</div>';
 echo '<div class="row">';
@@ -62,7 +43,7 @@ endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<h2 style="margin-bottom:30px;">Från bloggen:</h2>
+<h2 class="fran_bloggen_titel">Bloggen:</h2>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

@@ -56,9 +56,13 @@ margin-bottom:2.0em;
     padding-bottom: 0;
 }
 
-.box-padding {padding:15px;background-color:#e9e9e9;}
-.home-boxes {padding-bottom:30px;margin-bottom:30px;border-bottom:1px solid #cccccc;}
-
+.box-padding {padding:15px;background-color:#f2f2f2;}
+.home-boxes, .home-cta, .nytt-i-biblioteket-wrapper {padding-bottom:30px;margin-bottom:30px;border-bottom:1px solid #cccccc;}
+.home-cta .cta-wrapper h2 {font-size:1.5em;font-family:'EB Garamond',merriweather,georgia; max-width:900px;margin:0 auto 30px auto;}
+.home-cta .cta-wrapper form {max-width:400px;margin:0 auto;}
+.emailbottombox {padding:45px;background-color:#fff;border:3px solid #555555;margin-top:60px;}
+.emailbottombox h3 {font-size:1.5em;font-family:'EB Garamond',merriweather,georgia;}
+.fran_bloggen_titel {margin-bottom:30px;font-family:'EB Garamond',merriweather,georgia;}
 @media screen and (min-width: 44.375em){
 .site-title {
     font-size: 3rem;
@@ -142,15 +146,19 @@ border-bottom: 1px solid #e9e9e9 !important;
     margin-bottom: 0 !important;
 }
 @media screen and (min-width: 61.5625em){
-.author .dikt .entry-title {
-    font-size: 1.8rem !important;
-}}
+.author .dikt .entry-title {font-size: 1.8rem !important;}
+.emailbottombox h3 {font-size:2.5em;}
+.home-cta .cta-wrapper h2 {font-size:2.5em;}
+}
 @media screen and (min-width: 44.375em){
 .author .dikt .entry-title {
-    font-size: 1.6rem !important;
-}}
+    font-size: 1.6rem !important;}
+.emailbottombox h3 {font-size:2em;}
+}
+.home-cta .cta-wrapper h2 {font-size:2em;}
+}
 .home .nytt-i-biblioteket-wrapper h2 {margin-bottom:10px;}
-.home .nytt-i-biblioteket-titel {margin-bottom:30px !important;}
+.home .nytt-i-biblioteket-titel {margin-bottom:30px !important;font-family:'EB Garamond',merriweather,georgia;}
 @media screen and (min-width: 61.5625em){
 .home .nytt-i-biblioteket-wrapper .entry-footer {
     	width: 30% !important;

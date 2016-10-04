@@ -56,6 +56,7 @@ echo '</div>';
 				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
+			get_template_part( 'template-parts/emailbottombox' );
 		?>
 	</div><!-- .entry-content -->
 
